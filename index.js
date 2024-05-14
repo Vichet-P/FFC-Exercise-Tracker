@@ -65,6 +65,7 @@ app.post("/api/users/:_id/exercises", async (req, res) => {
     } else {
       const exerciseObj = new Exercise ({
         user_id: user._id,
+        username: user.username,
         description,
         duration,
         date: date ? new Date(date) : new Date()
